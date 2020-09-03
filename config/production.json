@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://dangulo4:dangulo4@contactkeeper.hoafu.mongodb.net/ReactContactKeeper?retryWrites=true&w=majority",
+  "jwtSecret": "secret"
+}
