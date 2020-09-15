@@ -19,10 +19,7 @@ const Navbar = ({ title, icon }) => {
 
   const authLinks = (
     <Fragment>
-      <li>Hello {user && user.name} </li>
-      <li>
-        <Link to='/search'> Search Leads</Link>
-      </li>
+      <li>Hello {user && user.name}</li>
       <li>
         <a onClick={onLogout} href='#!'>
           <i className='fas fa-sign-out-alt'></i>{' '}
@@ -59,7 +56,7 @@ Navbar.propTpyes = {
 };
 
 Navbar.defaultProps = {
-  title: 'SteadFast',
+  title: 'Contact Keeper',
   icon: 'fas fa-id-card-alt',
 };
 

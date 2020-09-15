@@ -12,11 +12,9 @@ const ContactForm = () => {
     } else {
       setContact({
         name: '',
-        company: '',
-        title: '',
         email: '',
         phone: '',
-        type: 'client',
+        type: 'personal',
       });
     }
   }, [contactContext, current]);
@@ -24,14 +22,12 @@ const ContactForm = () => {
   // Set state
   const [contact, setContact] = useState({
     name: '',
-    company: '',
-    title: '',
     email: '',
     phone: '',
-    type: 'client',
+    type: 'personal',
   });
 
-  const { name, email, company, title, phone, type } = contact;
+  const { name, email, phone, type } = contact;
 
   const onChange = (e) =>
     setContact({ ...contact, [e.target.name]: e.target.value });
@@ -63,20 +59,6 @@ const ContactForm = () => {
         onChange={onChange}
       />
       <input
-        type='text'
-        placeholder='Company'
-        name='company'
-        value={company}
-        onChange={onChange}
-      />
-      <input
-        type='text'
-        placeholder='Title'
-        name='title'
-        value={title}
-        onChange={onChange}
-      />
-      <input
         type='email'
         placeholder='Email'
         name='email'
@@ -94,19 +76,19 @@ const ContactForm = () => {
       <input
         type='radio'
         name='type'
-        value='client'
-        checked={type === 'client'}
+        value='personal'
+        checked={type === 'personal'}
         onChange={onChange}
       />
-      Client{' '}
+      Personal{' '}
       <input
         type='radio'
         name='type'
-        value='vendor'
-        checked={type === 'vendor'}
+        value='professional'
+        checked={type === 'professional'}
         onChange={onChange}
       />
-      Vendor
+      Professional
       <div>
         <input
           type='submit'

@@ -44,45 +44,37 @@ const Login = (props) => {
   };
 
   return (
-    <div className='row align-items-center'>
-      <div className='col-lg-7 py-3 py-md-5'>
-        <h1 className='display-3'>B2B Contacts</h1>
-        <p className='lead text-muted'>
-          Steadfast removes roadblocks for sales teams by providing a cohesive
-          platform that allows fast access to contacts in companies and easy CMS
-          storage for notes.
-        </p>
-      </div>
-      <div className='form-container col-lg-5 pl-lg-5 pb-3 py-lg-5'>
-        <h1>
-          Account <span className='text primary'>Login</span>
-        </h1>
-        <form onSubmit={onSubmit}>
-          <div className='form-group'>
-            <label htmlFor='email'>Email Address</label>
-            <input
-              type='email'
-              name='email'
-              value={email}
-              onChange={onChange}
-            />
-          </div>
-          <div className='form-group'>
-            <label htmlFor='password'>Password</label>
-            <input
-              type='password'
-              name='password'
-              value={password}
-              onChange={onChange}
-            />
-          </div>
+    <div className='form-container'>
+      <h1>
+        Account <span className='text primary'>Login</span>
+      </h1>
+      <form onSubmit={onSubmit}>
+        <div className='form-group'>
+          <label htmlFor='email'>Email Address</label>
           <input
-            type='submit'
-            value='Login'
-            className='btn btn-primary btn-block'
+            type='email'
+            name='email'
+            value={email}
+            onChange={onChange}
+            required
           />
-        </form>
-      </div>
+        </div>
+        <div className='form-group'>
+          <label htmlFor='password'>Password</label>
+          <input
+            type='password'
+            name='password'
+            value={password}
+            onChange={onChange}
+            required
+          />
+        </div>
+        <input
+          type='submit'
+          value='Login'
+          className='btn btn-primary btn-block'
+        />
+      </form>
     </div>
   );
 };
